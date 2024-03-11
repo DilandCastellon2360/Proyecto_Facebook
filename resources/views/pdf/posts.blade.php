@@ -36,7 +36,7 @@
     </style>
 </head>
 <body>
-    <h1>Listado de Posts</h1>
+    <h1>Listado de Publicaciones</h1>
     <table>
         <thead>
             <tr>
