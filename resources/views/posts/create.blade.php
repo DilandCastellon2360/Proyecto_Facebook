@@ -6,7 +6,7 @@
     <div class="container">
         <h1>Crear Publicación</h1>
 
-        <form method="POST" action="{{ route('posts.store') }}">
+        <form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data">
             @csrf
 
             <div class="form-group">
@@ -15,10 +15,14 @@
             </div>
 
             <div class="form-group">
+                <label for="image">Imagen</label>
+                <input type="file" class="form-control-file" id="image" name="image">
+            </div>
+
+            <div class="form-group">
                 <label for="post_date">Fecha de Publicación</label>
                 <input type="date" class="form-control" id="post_date" name="post_date">
             </div>
-
 
             <input type="hidden" name="user_id" value="{{ $user_id }}">
 

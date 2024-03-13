@@ -11,6 +11,7 @@
                 <tr>
                     <th>ID</th>
                     <th>Contenido</th>
+                    <th>Imagen</th>
                     <th>Fecha de Publicación</th>
                     <th>Nombre de Usuario</th>
                     <th>Acciones</th>
@@ -21,6 +22,13 @@
                     <tr>
                         <td>{{ $post->id }}</td>
                         <td>{{ $post->content }}</td>
+                        <td>
+                            @if($post->image)
+                                <img src="{{ asset('storage/' . $post->image) }}" alt="Imagen de la publicación" style="max-width: 150px;">
+                            @else
+                                No hay imagen
+                            @endif
+                        </td>
                         <td>{{ $post->post_date }}</td>
                         <td>{{ $post->user->name }}</td>
                         <td>

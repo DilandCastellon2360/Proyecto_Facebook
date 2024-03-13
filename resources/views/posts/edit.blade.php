@@ -4,15 +4,20 @@
 
 @section('content')
     <div class="container">
-        <h1>Editar Post</h1>
+        <h1>Editar Publicación</h1>
 
-        <form action="{{ route('posts.update', $post) }}" method="POST">
+        <form action="{{ route('posts.update', $post) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 
             <div class="form-group">
                 <label for="content">Contenido:</label>
                 <textarea name="content" id="content" class="form-control" rows="5">{{ $post->content }}</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Imagen:</label>
+                <input type="file" name="image" id="image" class="form-control-file">
             </div>
 
             <div class="form-group">

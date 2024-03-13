@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PdfController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,3 +31,9 @@ Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show')
 //Rutas para pdf
 Route::get('/generate-users-pdf', [PdfController::class, 'generateUsersPdf'])->name('users.pdf');
 Route::get('/generate-posts-pdf', [PdfController::class, 'generatePostsPdf'])->name('posts.pdf');
+
+//Ruta de Inicio
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
+

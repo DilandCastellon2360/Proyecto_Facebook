@@ -9,6 +9,9 @@
 <body>
     <nav>
         <ul>
+            <!-- Botón "Inicio" para ver todas las publicaciones -->
+            <li><a href="{{ route('home') }}"><img src="{{ asset('img/Inicio.png') }}" alt="Inicio"></a></li>
+
             <li><a href="{{ route('users.index') }}"><img src="{{ asset('img/Users.png') }}" alt="Users"></a></li>
             <li><a href="{{ route('posts.index') }}"><img src="{{ asset('img/Posts.png') }}" alt="Posts"></a></li>
 
@@ -24,6 +27,7 @@
             </div>
         </ul>
     </nav>
+
 
     <div class="container">
         <img src="{{ asset('img/Logo.png') }}" alt="Logo de Facebook" style="width: 60px; height: 60px; position: absolute; top: 14px; left: 15px;">

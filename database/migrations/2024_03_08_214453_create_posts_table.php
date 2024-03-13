@@ -14,13 +14,12 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->text('content');
+            $table->string('image')->nullable(); // Campo para la imagen de la publicación
             $table->date('post_date')->nullable()->default(now()); // Valor por defecto es la fecha actual
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
-
-
     }
 
     /**

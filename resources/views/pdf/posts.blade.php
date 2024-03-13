@@ -43,7 +43,7 @@
                 <th>ID</th>
                 <th>Contenido</th>
                 <th>Fecha de Publicación</th>
-                <th>Nombre de Usuario</th> <!-- Agregado -->
+                <th>Nombre de Usuario</th>
                 <!-- Otras columnas que quieras incluir -->
             </tr>
         </thead>
